@@ -33,17 +33,5 @@
     <h1>🎉 Payment Successful</h1>
     <p>Your transaction has been completed.</p>
   </div>
-
-  <script>
-    // Notify the parent (APEX page) of success
-    if (window.opener) {
-      window.opener.postMessage({ status: 'success' }, '*');
-    }
-
-    // Close the popup window after a short delay
-    setTimeout(() => {
-      window.close();
-    }, 2000);
-  </script>
 </body>
 </html>
