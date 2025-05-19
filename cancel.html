@@ -7,16 +7,6 @@
   <h1>Payment Cancelled</h1>
   <p>Your transaction was cancelled. You can close this window.</p>
 
-  <script>
-    // Send a message back to the parent window
-    if (window.opener) {
-      window.opener.postMessage({ status: 'fail' }, '*');
-    }
-    
-    // Optionally close the window after a few seconds
-    setTimeout(() => {
-      window.close();
-    }, 2000);
-  </script>
+
 </body>
 </html>
