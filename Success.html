@@ -32,7 +32,16 @@
     <h1>🎉 Payment Successful</h1>
     <p>Your transaction has been completed.</p>
   </div>
+  <script>
 
+    if (window.opener) {
+      try {
+        window.opener.postMessage({ status: 'success' }, '*'); 
+      } catch (err) {
+        console.error("Failed to post message to opener:", err);
+      }
+    }
+  </script>
 
 </body>
 </html>
