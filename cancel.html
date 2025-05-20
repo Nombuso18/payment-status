@@ -7,6 +7,16 @@
   <h1>Payment Cancelled</h1>
   <p>Your transaction was cancelled. You can close this window.</p>
 
+<script>
+  // This script sends a message to the opener (your APEX page)
+  if (window.opener) {
+    try {
+      window.opener.postMessage({ status: 'success' }, '*');  // or 'https://your-apex-domain.com'
+    } catch (e) {
+      console.error('Message failed:', e);
+    }
+  }
+</script>
 
 </body>
 </html>
