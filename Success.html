@@ -33,15 +33,6 @@
     <p>Your transaction has been completed.</p>
   </div>
 
-  <script>
-    // 🔄 This will post a message back to your APEX page if it was opened via window.open()
-    if (window.opener) {
-      try {
-        window.opener.postMessage({ status: 'success' }, '*'); // You can replace '*' with your APEX domain for better security
-      } catch (err) {
-        console.error("Failed to post message to opener:", err);
-      }
-    }
-  </script>
+
 </body>
 </html>
